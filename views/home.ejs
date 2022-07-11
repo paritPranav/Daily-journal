@@ -1,0 +1,15 @@
+<% include partials/header.ejs-%>
+
+<h1>Home</h1>
+
+<p><%= homestratContent %></p>
+
+<%for(var i=0;i<allposts.length;i++){ %>
+    <h2><%= allposts[i].title %></h2>
+    <p><%= allposts[i].content.substring(1,100) +"..." %><a href="/posts/<%= allposts[i].title%>" >Read More</a></p>
+
+<% } %>
+
+<a href="/compose"><button class="btn " id="Composebtn">+</button></a>
+
+<%-include partials/footer.ejs-%>
